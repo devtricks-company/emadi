@@ -1,34 +1,27 @@
-import { Link } from "gatsby"
+
 import PropTypes from "prop-types"
-import React from "react"
+import React from "react";
+import logo from '../images/logo.png';
+import searchLogo from '../images/searchicon.png';
+import barIcons from '../images/bar-icons.png';
 
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
+  <nav id="navbar">
+     
+        <a href="/" className="navbar-brand">
+          <img src={logo} alt="sanaz emadi"/>
+        </a>
+        <h1>دکتر ساناز عمادی</h1>
+        <div>
+          <a href="/">
+            <img src={searchLogo} alt="sanaz emadi"/>
+          </a>
+          <a href="/">
+            <img src={barIcons} alt="sanaz emadi"/>
+          </a>
+        </div>
+     
+  </nav>
 )
 
 Header.propTypes = {
